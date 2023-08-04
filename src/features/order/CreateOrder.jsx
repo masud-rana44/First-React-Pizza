@@ -7,13 +7,7 @@ import { fetchAddress, getUser } from '../user/userSlice';
 import { clearCart, getCart, getTotalCartPrice } from '../cart/cartSlice.js';
 import { useState } from 'react';
 import store from '../../store.js';
-import { formatCurrency } from '../../utils/helpers.js';
-
-// https://uibakery.io/regex-library/phone-number
-const isValidPhone = (str) =>
-  /^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/.test(
-    str,
-  );
+import { formatCurrency, isValidPhone } from '../../utils/helpers.js';
 
 function CreateOrder() {
   const dispatch = useDispatch();
